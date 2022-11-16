@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee Helper</title>
+        <link rel="icon" href="./svgs/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="body-flex">
+        <div>
+        <!-- Header -->
+        <div class="header-background"></div>
+        <header class="container header">
+            <h1><img draggable="false" src="./svgs/coffee_mug.svg"> Coffee Helper</h1>
+        </header>
+        <!-- Main input -->
+        <div class="main container">
+            <section>
+                <h2>Coffee-to-water ratio</h2>
+                <div class="flex space-evenly subcontainer">
+                    <div class="mainInputCard">
+                        <img src="./svgs/arrow_up.svg" draggable="false" class="arrow" id="coffeeArrowUp">
+                        <input type="number" min="1" placeholder="3" class="mainInput" id="coffeeRatio">
+                        <img src="./svgs/arrow_down.svg" draggable="false" class="arrow" id="coffeeArrowDown">
+                    </div>
+                    <div><span class="mainInputColon">:</span></div>
+                    <div class="mainInputCard">
+                        <img src="./svgs/arrow_up.svg" draggable="false" class="arrow" id="waterArrowUp">
+                        <input type="number" min="1" placeholder="50" class="mainInput" id="waterRatio">
+                        <img src="./svgs/arrow_down.svg" draggable="false" class="arrow" id="waterArrowDown">
+                    </div>
+                </div>
+            </section>
+            <!-- Portion size -->
+            <section>
+                <div class="flex subcontainer space-evenly">
+                    <div class="row">
+                        <input type="number" id="waterAmount" min="1" max="1000" placeholder="250"><span class="unitLiquid">ml</span><br>
+                        <span>of water</span>
+                    </div>
+                    <div class=><img src="./svgs/arrow_right.svg" draggable="false" class="arrowRight"></div>
+                    <div class="row">
+                        <span id="coffeeAmount">0.00</span><span class="unitSolid">g</span><br>
+                        <span>of coffee</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Ratio calculator -->
+            <section>
+                <div class="margin-bottom"><h2 class="ratio-title"><span>Ratio calculator</span></h2></div>
+                <div class="flex space-evenly subcontainer margin-bottom">
+                    <div>
+                        <input type="number" min="1" placeholder="500" id="calcWater"><span class="unitLiquid">ml</span><br>
+                        <span>of water</span>
+                    </div>
+                    <div><img src="./svgs/arrow_right.svg" draggable="false" class="arrowRight"></div>
+                    <div>
+                        <input type="number" min="1" placeholder="30" id="calcCoffee"><span class="unitSolid">g</span><br>
+                        <span>of coffee</span>
+                    </div>
+                </div>
+                <div class="margin-bottom"><h3><span id="calcRatioCoffee">0</span> : <span id="calcRatioWater">0</span></h3></div>
+                <div class="margin-bottom"><button id="foundBtn">Use this ratio?</button></div>
+            </section>
+            <!-- Stopwatch-->
+            <section>
+                <div class="flex space-between stopwatch-width margin-bottom">
+                    <div class="stopwatch-time">
+                        <span id="m" class="stopwatch">0</span>
+                        <span class="stopwatch">m</span>
+                    </div>
+                    <div class="stopwatch-time">
+                        <span id="s" class="stopwatch">0</span>
+                        <span class="stopwatch">s</span>
+                    </div>
+                    <div class="stopwatch-time">
+                        <span id="ms" class="stopwatch">0</span>
+                    </div>
+                </div>
+                <div class="stopwatch-buttons flex space-between">
+                    <button id="start" class="stopwatch-button">Start</button>
+                    <button id="stop" class="stopwatch-button">Stop</button>
+                    <button id="reset" class="stopwatch-button">Reset</button>
+                </div>
+            </section>
+        </div>
+    </div>
+        <footer class="flex"><p>Created with ❤ by <a href="https://github.com/zxasc">Paweł</a></p></footer>
+
+        <script src="./index.js"></script>
+    </body>
+
+</html>

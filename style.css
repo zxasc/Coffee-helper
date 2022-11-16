@@ -1,0 +1,240 @@
+/* || Variables and general */
+:root {
+    --clr-primary: #D9AE94;
+    --clr-secondary: #432818;
+    --clr-accent: #F1DCA7;
+    --clr-white: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--clr-white);
+    min-height: 810px;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.subcontainer {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+
+
+.row {
+    width: 6rem;
+}
+
+.body-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* || Header */
+
+.header-background {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    background-color: var(--clr-primary);
+    max-height: 280px;
+}
+
+.header {
+    color: var(--clr-secondary);
+    letter-spacing: 0.1rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.header img {
+    width: 2.5rem;
+    vertical-align: text-top;
+    filter: invert(13%) sepia(12%) saturate(2840%) hue-rotate(338deg) brightness(97%) contrast(88%);
+}
+
+.margin-bottom {
+    margin-bottom: 0.5rem;
+}
+
+section+section {
+    margin-top: 1.75rem;
+}
+
+button {
+    border: none;
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    transition-duration: 0.5s;
+    
+}
+
+button:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-secondary);
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    background-color: var(--clr-primary);
+    border-radius: 1rem;
+    width: 3rem;
+    text-align: center;
+    transition: 0.5s;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;  
+}
+
+input:focus {
+    background-color: var(--clr-accent);
+    outline: var(--clr-primary);
+}
+
+/* || Main input */
+
+.main {
+    max-width: 500px;
+    background-color: var(--clr-white);
+    color: var(--clr-secondary);
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    border: 5px solid var(--clr-primary);
+}
+
+.mainInput {
+    width: 6rem;
+    height: 3.5rem;
+    text-align: center;
+    font-size: 3.5rem;
+    border: none;
+    background-color: var(--clr-primary);
+}
+
+.mainInputColon {
+    font-size: 3.5rem;
+    vertical-align: center;
+}
+
+.mainInputCard {
+    width: 6rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary);
+    border-radius: 1rem;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrowRight{
+    width: 1.5rem;
+    vertical-align: bottom;
+    filter: invert(15%) sepia(11%) saturate(3191%) hue-rotate(323deg) brightness(96%) contrast(84%);
+}
+
+/* || Portion size */
+
+#coffeeAmount {
+    text-decoration: underline wavy 1.25px var(--clr-primary);
+}
+
+/* || Ratio calculator */
+
+#foundBtn {
+    width: 196px;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+}
+
+/* || Stopwatch */
+
+.stopwatch-buttons {
+    width: 196px;
+    margin: 0 auto;
+}
+
+.stopwatch-button {
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.stopwatch-time {
+    width: calc(196px/3);
+    font-size: 1.5rem;
+}
+
+.stopwatch-width {
+    width: 196px;
+    margin: 0 auto 0.5rem auto;
+}
+
+/* Footer */
+
+footer {
+    background: var(--clr-primary);
+    width: 100%;
+    height: 30px;
+    padding: 0 1rem;
+    justify-content: right;
+}
+
+footer p {
+    width: 500px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+a {
+    text-decoration: var(--clr-secondary) underline solid;
+    color: var(--clr-secondary);
+    transition: 0.5s;
+}
+
+a:hover {
+    color: var(--clr-accent);
+    text-decoration: var(--clr-accent) underline solid;
+}
